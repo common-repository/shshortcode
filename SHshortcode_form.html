@@ -1,0 +1,88 @@
+<link rel="stylesheet" type="text/css" href="../wp-content/plugins/SHshortcode/style.css" />
+
+<form id="SHshortcode-form">
+	<label for="SHshortcode-language">Language</label>
+	<select id="SHshortcode-language" name="language" class="forceLeft">
+		<option value="actionscript3">Actionscript 3</option>
+		<option value="bash">Bash / Shell</option>
+		<option value="cf">Coldfusion</option>
+		<option value="csharp">C#</option>
+		<option value="cpp">C++</option>
+		<option value="css">CSS</option>
+		<option value="delphi">Delphi</option>
+		<option value="diff">Diff</option>
+		<option value="erlang">Erlang</option>
+		<option value="groovy">Groovy</option>
+		<option value="js">Java Script</option>
+		<option value="java">Java</option>
+		<option value="jfx">JavaFX</option>
+		<option value="perl">Perl</option>
+		<option value="php">PHP</option>
+		<option value="plain">Plain Text</option>
+		<option value="ps">PowerShell</option>
+		<option value="py">Python</option>
+		<option value="rails">Ruby</option>
+		<option value="scala">Scala</option>
+		<option value="sql">SQL</option>
+		<option value="vb">Visual Basic</option>
+		<option value="xml">XML</option>
+	</select>
+	<br />
+	<small class="forceLeft">specify which language you are using</small>
+	<p />
+	<hr />
+	<label for="showAdvanced">Advanced options</label>
+	<input type="checkbox" id="SHshortcode-advanced" onclick="showAdvanced()"/ class="forceLeft"><span class="forceLeft">Show advanced options</span><br />
+	<small class="forceLeft">Allows you to specify advanced options (If this box is not checked then your default settings will be used)</small>
+	<p /><p />
+	<hr />
+	<div id="hideContent" class="hideContent">
+		<div class="floatLeft">
+			<label for="SHshortcode-title">Title</label><br />
+			<input type="textbox" id="SHshortcode-title" name="title" class="fullWidth"/><br />
+			<small>Title to appear above code</small>
+			<br />
+			<label for="SHshortcode-firstline">First Line</label><br />
+			<input type="textbox" id="SHshortcode-firstline" name="firstline" value="1" class="fullWidth"/><br />
+			<small>what should line numbers start at</small>
+			<br />
+			<label for="SHshortcode-highlight">Highlight lines</label><br />
+			<input type="textbox" id="SHshortcode-highlight" name="highlight" class="fullWidth"/><br />
+			<small>while lines should be highlighted (seperate with comma)</small>
+			<br />
+			<label for="SHshortcode-autolinks">Automatic URL Linking</label><br />
+			<input type="radio" id="SHshortcode-autolinks" name="autolinks" value="true" checked>Yes<br />
+			<input type="radio" id="SHshortcode-autolinks" name="autolinks" value="false">No<br />
+			<small>would you like to turn on URL linking</small>
+		</div>
+		<div class="floatRight">
+			<label for="SHshortcode-collapse">Collapse Code box</label><br />
+			<input type="radio" id="SHshortcode-collapse" name="collapse" value="true">Yes<br />
+			<input type="radio" id="SHshortcode-collapse" name="collapse" value="false" checked>No<br />
+			<small>collapse code box by default, requiring user to click to expand it</small>
+			<br />
+			<label for="SHshortcode-gutter">Show Line Numbers</label><br />
+			<input type="radio" id="SHshortcode-gutter" name="gutter" value="true" checked>Yes<br />
+			<input type="radio" id="SHshortcode-gutter" name="gutter" value="false">No<br />
+			<small>Display line numbers on the left hand side of code</small>
+			<br />
+			<label for="SHshortcode-htmlscript">Highlight extra HTML</label><br />
+			<input type="radio" id="SHshortcode-htmlscript" name="htmlscript" value="true" checked>Yes<br />
+			<input type="radio" id="SHshortcode-htmlscript" name="htmlscript" value="false">No<br />
+			<small>Usefull if you are mixin languages (such as PHP and HTML)</small>
+			<br />
+			<label for="SHshortcode-toolbar">Display toolbar</label><br />
+			<input type="radio" id="SHshortcode-toolbar" name="toolbar" value="true" checked>Yes<br />
+			<input type="radio" id="SHshortcode-toolbar" name="toolbar" value="false">No<br />
+			<small>Display toolbar</small>
+			<br />
+			<label for="SHshortcode-wraplines">Enable line wrapping</label><br />
+			<input type="radio" id="SHshortcode-wraplines" name="wraplines" value="true" checked>Yes<br />
+			<input type="radio" id="SHshortcode-wraplines" name="wraplines" value="false">No<br />
+			<small>Text wraps around onto next line if enabled </small>
+		</div>
+	</div>
+	<p class="submit">
+		<input type="button" id="SHshortcode-submit" class="button-primary" value="Insert Shortcode" name="submit" onClick="generateShortCode()" />
+	</p>
+</form>

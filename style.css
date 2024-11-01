@@ -1,0 +1,49 @@
+form#SHshortcode-form
+{
+	padding: 10px;
+}
+
+label
+{
+	font-weight: bold;
+}
+
+.forceLeft
+{
+	position: absolute;
+	left: 200px;
+}
+
+small.forceLeft
+{
+	margin-top: 10px;
+	margin-left: 3px;
+}
+
+span.forceLeft
+{
+	margin-left: 20px;
+}
+
+div.floatLeft, div.floatRight
+{
+	float: left;
+	width: 49%;
+}
+
+hr
+{
+	width: 100%;
+}
+
+.fullWidth
+{
+	width: 90%;
+}
+
+.hideContent
+{
+	overflow: auto;
+	width: 100%;
+	display: none;
+}
